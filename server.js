@@ -22,3 +22,5 @@ server.on("request", (request, response) => {
 server.listen(process.env.PORT || 8008, () => {
     console.log("Server listening at 8008");
 });
+
+module.exports = server;

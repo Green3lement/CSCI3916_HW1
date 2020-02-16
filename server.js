@@ -1,5 +1,6 @@
 var http = require ("http");
 var server = http.createServer();
+
 server.on("request", (request, response) => {
     var body = [];
     request.on("data", chunk => {
@@ -7,9 +8,9 @@ server.on("request", (request, response) => {
     });
     request
         .on("end", () => {
-            let bodyString = body.concat.toString();
-            console.log(bodyString);
-            response.end(bodyString);
+            //let bodyString = body.concat.toString();
+            console.log(body);
+            response.end(body);
         })
         .on("error", () => {
             response.statusCode = 400;
